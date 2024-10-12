@@ -1,5 +1,5 @@
 {% set name = "libdate" %}
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/HowardHinnant/date/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 7a390f200f0ccd207e8cff6757e04817c1a0aec3e327b006b7eb451c57ee3538
+  sha256: 0449667ea85c5b411c28d08a53f1e420c73416caa5b693c249dac9763eb97b7c
 
 build:
   number: 0
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - ninja
